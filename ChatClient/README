@@ -1,0 +1,28 @@
+Question 1: http://homepage.divms.uiowa.edu/~kdenhartog/
+
+Note: No changes were made to the html when I first gave read access.
+      I am now unable to ssh into the linux.cs.uiowa.edu box,
+      so it is unable to be changed now.
+
+Chat Client
+
+Arguments required for chat.py
+1: the username of the person using this client in the form of a string.
+2: the IP and port in the form of IP:port written as a string of this client.
+3: A username or the IP and port in the form of IP:port written as a string of who you wish to talk with.
+   If a username is used, it will automatically make a lookup call to the registry. If it is unable to
+   a value, it will sleep for 5 seconds and retry again.
+4: A string that includes the IP address and port number of the directory service.
+
+Notes: to exit the chat after a connection has been made by two clients type exit(1).
+       The program will close the socket on the client who typed that command (user 1) and will automatically
+       send a message to the user 2 notifying them that the connection was closed and
+       close user 2's connection as well.
+
+Arguments required for dirservice.py
+1: A string that includes the IP address and port number of the directory service.
+
+Notes: The table must be rebuilt everytime this is restarted. An additional feature to be added later
+       would be to take in a csv file as an argument of a stored directory and as new users are added,
+       their information will be added to the csv file as well as the dictionary stored in memory.
+       Advanced features would utilize an SQL database with prepared statements.
